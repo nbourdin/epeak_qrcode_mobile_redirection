@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+
+<head>
+    <script src="ua-parser.min.js"></script>
+    <script>
+
+        const parser = new UAParser();
+        const { os } = parser.getResult();
+        switch (os?.name.toLocaleLowerCase()) {
+            case 'android':
+                window.location.href = 'https://play.google.com/store/apps/details?id=co.epeak.app&gl=FR';
+                break;
+            case 'ios':
+                window.location.href = 'https://apps.apple.com/fr/app/epeak-lesprit-club/id1573358955';
+                break;
+            default:
+                window.location.href = 'https://epeak.co';
+                break;
+
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
